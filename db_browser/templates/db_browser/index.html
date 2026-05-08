@@ -1,0 +1,99 @@
+{% extends "db_browser/base.html" %}
+
+{% block title %}ようこそ - 大学受験 英文DB{% endblock %}
+{% block body_class %}start-page{% endblock %}
+{% block layout_class %}start-layout{% endblock %}
+
+{% block content %}
+  <section class="welcome-hero" aria-labelledby="welcome-title">
+    <div class="welcome-copy">
+      <p class="welcome-kicker">ようこそ</p>
+      <h1 id="welcome-title">今日はどんな英文で学習しますか？</h1>
+      <p class="welcome-lead">一問ずつ、読みの精度を上げていきましょう。</p>
+      <p class="welcome-lead">このページに掲載されている英文はすべてオリジナル英文です。</p>
+    </div>
+    <div class="learning-visual" aria-hidden="true">
+      <div class="visual-frame">
+        <span class="visual-scan"></span>
+        <span class="visual-line line-a"></span>
+        <span class="visual-line line-b"></span>
+        <span class="visual-line line-c"></span>
+        <span class="visual-line line-d"></span>
+        <span class="visual-node node-a"></span>
+        <span class="visual-node node-b"></span>
+        <span class="visual-node node-c"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="start-command" aria-label="英文検索">
+    <form class="welcome-search" action="{% url 'db_browser:index' %}" method="get">
+      <label>
+        <span>キーワード</span>
+        <input name="q" value="{{ query }}" placeholder="例: 関西大学 design 受動態">
+      </label>
+      <label>
+        <span>レベルタグ</span>
+        <select name="level_tag">
+          <option value="">すべて</option>
+          {% for option in level_tag_options %}
+            <option value="{{ option }}"{% if option == level_tag %} selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>語数下限</span>
+        <input name="word_min" value="{{ word_min|default:'' }}" inputmode="numeric" placeholder="例: 700">
+      </label>
+      <label>
+        <span>語数上限</span>
+        <input name="word_max" value="{{ word_max|default:'' }}" inputmode="numeric" placeholder="例: 1000">
+      </label>
+      <button type="submit">検索</button>
+      {% if query or level_tag or word_min or word_max %}
+        <a class="secondary-button" href="{% url 'db_browser:index' %}">解除</a>
+      {% endif %}
+    </form>
+  </section>
+
+  {% include "db_browser/partials/ad_slot.html" with placement="start-top" title="上部広告枠" note="検索直後に表示する広告枠です" %}
+
+  <div class="start-summary">
+    <h2>{% if query or level_tag or word_min or word_max %}検索結果{% else %}学習する英文を選択{% endif %}</h2>
+    <p>{{ result.total }}件</p>
+  </div>
+
+  <section class="passage-list start-passage-list" aria-label="入試英文の選択">
+    {% for passage in passages %}
+      <article class="passage-card start-card" style="--delay-index: {{ forloop.counter0 }};">
+        <div class="passage-card-main">
+          <a class="passage-title" href="{{ passage.read_url }}">{{ passage.source_exam }}</a>
+          <div class="badge-row">
+            <span>{{ passage.year }}</span>
+            <span>{{ passage.level_tag }}</span>
+            <span>{{ passage.text_type }}</span>
+            <span>{{ passage.word_count }}語</span>
+          </div>
+          <p class="topic">{{ passage.topic }}</p>
+          <p class="preview">{{ passage.preview }}</p>
+        </div>
+        <a class="open-link" href="{{ passage.read_url }}">この英文で学習</a>
+      </article>
+      {% if forloop.counter == 3 %}
+        {% include "db_browser/partials/ad_slot.html" with placement="start-middle" title="中央広告枠" note="英文一覧の途中に表示する広告枠です" %}
+      {% endif %}
+    {% empty %}
+      <section class="panel empty-state">該当する入試英文がありません。</section>
+    {% endfor %}
+  </section>
+
+  {% include "db_browser/partials/ad_slot.html" with placement="start" title="学習サポート広告" note="スタート画面用の広告枠です" %}
+
+  <div class="pagination">
+    <div>{{ result.page }} / {{ result.page_count }}ページ</div>
+    <div class="pagination-actions">
+      {% if prev_url %}<a href="{{ prev_url }}">前へ</a>{% endif %}
+      {% if next_url %}<a href="{{ next_url }}">次へ</a>{% endif %}
+    </div>
+  </div>
+{% endblock %}

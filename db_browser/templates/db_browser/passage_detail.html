@@ -1,0 +1,102 @@
+{% extends "db_browser/base.html" %}
+
+{% block title %}{{ passage.source_exam }} - 大学受験 英文DB{% endblock %}
+
+{% block content %}
+  <div class="detail-head passage-head">
+    <div>
+      <a class="back-link" href="{{ back_url }}">← 英文一覧に戻る</a>
+      <h1>{{ passage.source_exam }}</h1>
+      <p class="topic">{{ passage.topic }}</p>
+      <div class="badge-row">
+        <span>{{ passage.year }}</span>
+        <span>{{ passage.level_tag }}</span>
+        <span>{{ passage.text_type }}</span>
+        <span>{{ passage.word_count }}語</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="study-tabs" aria-label="分析メニュー">
+    <a href="#passage">本文</a>
+    {% for section in sections %}
+      <a href="#{{ section.name }}">{{ section.label }} <span>{{ section.total }}</span></a>
+    {% endfor %}
+  </nav>
+
+  {% include "db_browser/partials/ad_slot.html" with placement="analysis-top" title="上部広告枠" note="分析メニュー下に表示する広告枠です" %}
+
+  <section id="passage" class="study-section">
+    <div class="section-header">
+      <h2>本文</h2>
+    </div>
+    <div class="passage-text-grid">
+      <article>
+        <h3>English</h3>
+        <pre class="passage-text">{{ passage.passage_en }}</pre>
+      </article>
+      {% if passage.passage_jp %}
+        <article>
+          <h3>日本語訳</h3>
+          <pre class="passage-text">{{ passage.passage_jp }}</pre>
+        </article>
+      {% endif %}
+    </div>
+  </section>
+
+  {% for section in sections %}
+    <section id="{{ section.name }}" class="study-section">
+      <div class="section-header">
+        <div>
+          <h2>{{ section.label }}</h2>
+          <p>{{ section.total }}件</p>
+        </div>
+      </div>
+      {% if section.rows %}
+        <div class="table-wrap compact">
+          <table>
+            <colgroup>
+              <col class="action-col">
+              {% for column in section.columns %}
+                <col style="width: {{ column.width }};">
+              {% endfor %}
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="row-action">詳細</th>
+                {% for column in section.columns %}
+                  <th>{{ column.label }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in section.rows %}
+                <tr>
+                  <td class="row-action">
+                    {% if row.detail_url %}
+                      <a href="{{ row.detail_url }}">開く</a>
+                    {% else %}
+                      <span>-</span>
+                    {% endif %}
+                  </td>
+                  {% for cell in row.cells %}
+                    <td class="{% if cell.value.is_null %}null-cell{% endif %}">
+                      <span title="{{ cell.value.text }}">{{ cell.value.preview|default:cell.value.text }}</span>
+                    </td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="empty-state inline-empty">この英文に紐づくデータはありません。</p>
+      {% endif %}
+    </section>
+    {% if forloop.counter == 3 %}
+      {% include "db_browser/partials/ad_slot.html" with placement="analysis-middle" title="中央広告枠" note="分析セクションの途中に表示する広告枠です" %}
+    {% endif %}
+  {% endfor %}
+
+  {% include "db_browser/partials/ad_slot.html" with placement="analysis" title="分析画面下部の広告枠" note="分析コンテンツの下に表示する広告枠です" %}
+{% endblock %}

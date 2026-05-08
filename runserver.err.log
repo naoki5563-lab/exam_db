@@ -1,0 +1,241 @@
+Watching for file changes with StatReloader
+[08/May/2026 15:00:30] "GET / HTTP/1.1" 200 86695
+[08/May/2026 15:00:30,748] - Broken pipe from ('127.0.0.1', 57462)
+C:\Users\naoki\english_reading_db\db_browser\db.py changed, reloading.
+Watching for file changes with StatReloader
+[08/May/2026 15:01:00] "GET /search/?q=design HTTP/1.1" 200 95141
+[08/May/2026 15:01:00,727] - Broken pipe from ('127.0.0.1', 64187)
+[08/May/2026 15:01:32] "GET / HTTP/1.1" 200 86695
+[08/May/2026 15:01:32,670] - Broken pipe from ('127.0.0.1', 53406)
+[08/May/2026 15:01:54] "GET / HTTP/1.1" 200 86695
+[08/May/2026 15:01:55,046] - Broken pipe from ('127.0.0.1', 57949)
+[08/May/2026 15:02:28] "GET / HTTP/1.1" 200 86695
+[08/May/2026 15:02:28] "GET /static/db_browser/styles.css HTTP/1.1" 200 6478
+Not Found: /favicon.ico
+[08/May/2026 15:02:28] "GET /favicon.ico HTTP/1.1" 404 2877
+[08/May/2026 15:02:34] "GET /tables/passages/1/ HTTP/1.1" 200 110116
+[08/May/2026 15:02:44] "GET /?table=exam_intents HTTP/1.1" 200 21615
+[08/May/2026 15:02:45] "GET /?table=grammar_items&per_page=25 HTTP/1.1" 200 54009
+[08/May/2026 15:02:45] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:02:46] "GET /?table=logic_relations&per_page=25 HTTP/1.1" 200 32535
+[08/May/2026 15:02:47] "GET /?table=paragraph_roles&per_page=25 HTTP/1.1" 200 44933
+[08/May/2026 15:02:47] "GET /?table=reuse_notes&per_page=25 HTTP/1.1" 200 4420
+[08/May/2026 15:02:49] "GET /?table=reuse_notes&per_page=25 HTTP/1.1" 200 4420
+[08/May/2026 15:02:49] "GET /?table=vocab_collocations&per_page=25 HTTP/1.1" 200 25752
+[08/May/2026 15:02:50] "GET /?table=vocab_keywords&per_page=25 HTTP/1.1" 200 28715
+[08/May/2026 15:02:51] "GET /?table=reuse_notes&per_page=25 HTTP/1.1" 200 4420
+[08/May/2026 15:02:51] "GET /?table=paragraph_roles&per_page=25 HTTP/1.1" 200 44933
+[08/May/2026 15:02:52] "GET /?table=logic_relations&per_page=25 HTTP/1.1" 200 32535
+[08/May/2026 15:02:53] "GET /?table=grammar_items&per_page=25 HTTP/1.1" 200 54009
+[08/May/2026 15:02:53] "GET /?table=exam_intents&per_page=25 HTTP/1.1" 200 21615
+[08/May/2026 15:02:54] "GET /?table=passages&per_page=25 HTTP/1.1" 200 86695
+[08/May/2026 15:02:58] "GET / HTTP/1.1" 200 86695
+[08/May/2026 15:03:01] "GET /?table=vocab_collocations&per_page=25 HTTP/1.1" 200 25752
+[08/May/2026 15:03:02] "GET /?table=reuse_notes&per_page=25 HTTP/1.1" 200 4420
+[08/May/2026 15:03:03] "GET /?table=exam_intents&per_page=25 HTTP/1.1" 200 21615
+[08/May/2026 15:03:08] "GET /?table=passages&per_page=25 HTTP/1.1" 200 86695
+[08/May/2026 15:03:08] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:03:12] "GET /tables/passages/2/ HTTP/1.1" 200 101632
+[08/May/2026 15:03:22] "GET /?table=vocab_keywords&q=2 HTTP/1.1" 200 28220
+C:\Users\naoki\english_reading_db\db_browser\db.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\naoki\english_reading_db\db_browser\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\naoki\english_reading_db\db_browser\urls.py changed, reloading.
+Watching for file changes with StatReloader
+[08/May/2026 15:09:06] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:09:06,582] - Broken pipe from ('127.0.0.1', 53196)
+[08/May/2026 15:09:13] "GET / HTTP/1.1" 200 9376
+[08/May/2026 15:09:13] "GET /search/?q=design HTTP/1.1" 200 86857
+[08/May/2026 15:09:13,173] - Broken pipe from ('127.0.0.1', 53209)
+[08/May/2026 15:09:13,256] - Broken pipe from ('127.0.0.1', 53210)
+[08/May/2026 15:09:51] "GET / HTTP/1.1" 200 9376
+[08/May/2026 15:09:51] "GET /static/db_browser/styles.css HTTP/1.1" 200 9409
+[08/May/2026 15:09:57] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:10:29] "GET /passages/3/ HTTP/1.1" 200 223930
+[08/May/2026 15:10:29] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:10:31] "GET /passages/4/ HTTP/1.1" 200 150048
+[08/May/2026 15:10:54] "GET /tables/vocab_collocations/438/ HTTP/1.1" 200 6366
+[08/May/2026 15:10:54] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:11:09] "GET /passages/5/ HTTP/1.1" 200 87407
+[08/May/2026 15:11:09] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:13:05] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:13:06,368] - Broken pipe from ('127.0.0.1', 64573)
+[08/May/2026 15:13:39] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:13:39,399] - Broken pipe from ('127.0.0.1', 53125)
+[08/May/2026 15:14:02] "GET /static/db_browser/styles.css HTTP/1.1" 200 9525
+[08/May/2026 15:14:02,479] - Broken pipe from ('127.0.0.1', 62068)
+[08/May/2026 15:14:15] "GET /passages/5/ HTTP/1.1" 200 87407
+[08/May/2026 15:14:15] "GET /static/db_browser/styles.css HTTP/1.1" 200 9525
+[08/May/2026 15:14:39] "GET /passages/2/ HTTP/1.1" 200 128270
+[08/May/2026 15:14:39] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:14:39] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:15:09] "GET /passages/2/ HTTP/1.1" 200 128270
+[08/May/2026 15:15:09] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:15:09] "GET /passages/1/ HTTP/1.1" 200 186317
+[08/May/2026 15:19:34] "GET / HTTP/1.1" 200 9806
+[08/May/2026 15:19:34,654] - Broken pipe from ('127.0.0.1', 62488)
+[08/May/2026 15:19:41] "GET /static/db_browser/styles.css HTTP/1.1" 200 13488
+[08/May/2026 15:19:41] "GET /passages/1/ HTTP/1.1" 200 186327
+[08/May/2026 15:19:41,519] - Broken pipe from ('127.0.0.1', 62490)
+[08/May/2026 15:19:41,638] - Broken pipe from ('127.0.0.1', 62491)
+[08/May/2026 15:21:42] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:21:42] "GET /passages/1/ HTTP/1.1" 200 186422
+[08/May/2026 15:21:42,236] - Broken pipe from ('127.0.0.1', 60093)
+[08/May/2026 15:21:42,378] - Broken pipe from ('127.0.0.1', 60094)
+[08/May/2026 15:21:59] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:21:59,467] - Broken pipe from ('127.0.0.1', 65425)
+[08/May/2026 15:22:15] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:22:16] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:22:25] "GET /passages/1/ HTTP/1.1" 200 186422
+[08/May/2026 15:22:26] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:23:03] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:23:04] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:23:22] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:23:23] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:23:32] "GET /passages/1/ HTTP/1.1" 200 186422
+[08/May/2026 15:23:33] "GET /static/db_browser/styles.css HTTP/1.1" 200 25494
+[08/May/2026 15:24:10] "GET /passages/1/ HTTP/1.1" 200 186422
+[08/May/2026 15:24:12] "GET /static/db_browser/styles.css HTTP/1.1" 200 25544
+[08/May/2026 15:24:28] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:24:29] "GET /static/db_browser/styles.css HTTP/1.1" 200 25544
+[08/May/2026 15:25:24] "GET /passages/2/ HTTP/1.1" 200 128375
+[08/May/2026 15:25:24] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:26:51] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:26:51] "GET /static/db_browser/styles.css HTTP/1.1" 200 26149
+[08/May/2026 15:26:57] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:26:59] "GET /static/db_browser/styles.css HTTP/1.1" 200 26149
+[08/May/2026 15:27:17] "GET /search/ HTTP/1.1" 200 3119
+[08/May/2026 15:27:17] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:27:19] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:27:20] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:27:20] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:27:24] "GET /search/ HTTP/1.1" 200 3119
+[08/May/2026 15:27:24] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:27:26] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:28:07] "GET /passages/2/ HTTP/1.1" 200 128375
+[08/May/2026 15:28:07] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:28:38] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:28:38] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+C:\Users\naoki\english_reading_db\db_browser\views.py changed, reloading.
+Watching for file changes with StatReloader
+[08/May/2026 15:30:33] "GET /passages/1/ HTTP/1.1" 200 188165
+[08/May/2026 15:30:34] "GET /static/db_browser/styles.css HTTP/1.1" 200 26181
+[08/May/2026 15:31:32] "GET / HTTP/1.1" 200 10422
+[08/May/2026 15:31:32] "GET /static/db_browser/styles.css HTTP/1.1" 200 26181
+[08/May/2026 15:31:34] "GET /passages/2/ HTTP/1.1" 200 130118
+C:\Users\naoki\english_reading_db\db_browser\views.py changed, reloading.
+Watching for file changes with StatReloader
+[08/May/2026 15:35:06] "GET /passages/1/read/ HTTP/1.1" 200 9345
+[08/May/2026 15:35:06,588] - Broken pipe from ('127.0.0.1', 57739)
+[08/May/2026 15:35:06] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:35:06,710] - Broken pipe from ('127.0.0.1', 57740)
+[08/May/2026 15:35:06] "GET /passages/2/ HTTP/1.1" 200 130186
+[08/May/2026 15:35:06] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:35:06] "GET /static/db_browser/styles.css HTTP/1.1" 200 28517
+[08/May/2026 15:35:08] "GET / HTTP/1.1" 200 10560
+[08/May/2026 15:35:08] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:35:11] "GET /passages/1/read/ HTTP/1.1" 200 9345
+[08/May/2026 15:35:11] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:35:11] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:35:19] "GET /passages/1/ HTTP/1.1" 200 188233
+[08/May/2026 15:35:19] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:35:19] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:35:24] "GET / HTTP/1.1" 200 10560
+[08/May/2026 15:35:24] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:35:24] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:35:24] "GET /passages/1/read/ HTTP/1.1" 200 9345
+[08/May/2026 15:35:25] "GET /static/db_browser/styles.css HTTP/1.1" 200 28517
+[08/May/2026 15:35:25] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:35:34] "GET /passages/1/read/ HTTP/1.1" 200 9345
+[08/May/2026 15:35:35] "GET /static/db_browser/styles.css HTTP/1.1" 200 28517
+[08/May/2026 15:35:35] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:36:26] "GET /passages/3/read/ HTTP/1.1" 200 9789
+[08/May/2026 15:36:26] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:36:26] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:36:28] "GET /passages/3/ HTTP/1.1" 200 225846
+[08/May/2026 15:37:20] "GET / HTTP/1.1" 200 10560
+[08/May/2026 15:37:20] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:37:20] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:37:34] "GET /passages/3/read/ HTTP/1.1" 200 9789
+[08/May/2026 15:37:37] "GET /passages/3/ HTTP/1.1" 200 225846
+[08/May/2026 15:37:37] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:38:32] "GET / HTTP/1.1" 200 10560
+[08/May/2026 15:38:32] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:38:32] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:38:39] "GET /?q=%E9%96%A2%E8%A5%BF%E3%80%80%EF%BC%91 HTTP/1.1" 200 4522
+[08/May/2026 15:38:42] "GET /?q=%E9%96%A2%E8%A5%BF%E3%80%801 HTTP/1.1" 200 4518
+[08/May/2026 15:38:46] "GET /?q=%E9%96%A2%E8%A5%BF%2C+1 HTTP/1.1" 200 4516
+C:\Users\naoki\english_reading_db\db_browser\db.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\naoki\english_reading_db\db_browser\views.py changed, reloading.
+Watching for file changes with StatReloader
+[08/May/2026 15:41:41] "GET /?q=%E9%96%A2%E8%A5%BF%E5%A4%A7%E5%AD%A6%20design&level_tag=%5BKKD-MARCH%5D&word_min=900&word_max=1000 HTTP/1.1" 200 6775
+[08/May/2026 15:41:41,428] - Broken pipe from ('127.0.0.1', 49334)
+[08/May/2026 15:41:41] "GET /static/db_browser/styles.css HTTP/1.1" 200 28819
+[08/May/2026 15:41:41,540] - Broken pipe from ('127.0.0.1', 49333)
+[08/May/2026 15:42:00] "GET /?q=%E9%96%A2%E8%A5%BF%E5%A4%A7%E5%AD%A6%20design&level_tag=%5BKKD-MARCH%5D&word_min=900&word_max=1000 HTTP/1.1" 200 6775
+[08/May/2026 15:42:02] "GET /static/db_browser/styles.css HTTP/1.1" 200 28819
+[08/May/2026 15:42:02] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:42:12] "GET /?q=%E9%96%A2%E8%A5%BF%E5%A4%A7%E5%AD%A6%20design&level_tag=%5BKKD-MARCH%5D&word_min=900&word_max=1000 HTTP/1.1" 200 6775
+[08/May/2026 15:42:13] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:42:13] "GET /static/db_browser/styles.css HTTP/1.1" 200 28819
+[08/May/2026 15:42:50] "GET / HTTP/1.1" 200 11219
+[08/May/2026 15:42:50,674] - Broken pipe from ('127.0.0.1', 60439)
+[08/May/2026 15:43:02] "GET /?q=%E9%96%A2%E8%A5%BF%2C+1 HTTP/1.1" 200 5157
+[08/May/2026 15:43:02] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:43:02] "GET /static/db_browser/styles.css HTTP/1.1" 200 28819
+[08/May/2026 15:43:16] "GET /?q=%E9%96%A2%E8%A5%BF%2C1&level_tag=&word_min=&word_max= HTTP/1.1" 200 5156
+[08/May/2026 15:43:16] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:43:22] "GET /?q=%E9%96%A2%E8%A5%BF%E3%80%801&level_tag=&word_min=&word_max= HTTP/1.1" 200 11277
+[08/May/2026 15:43:33] "GET /?q=%E9%96%A2%E8%A5%BF%E3%80%80%E7%AC%AC2%E5%95%8F&level_tag=&word_min=&word_max= HTTP/1.1" 200 8646
+[08/May/2026 15:43:33] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:43:59] "GET /passages/1/read/ HTTP/1.1" 200 9345
+[08/May/2026 15:43:59] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:43:59] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:44:04] "GET /passages/1/ HTTP/1.1" 200 188233
+[08/May/2026 15:47:30] "GET / HTTP/1.1" 200 11505
+[08/May/2026 15:47:30] "GET /passages/1/read/ HTTP/1.1" 200 9649
+[08/May/2026 15:47:30,632] - Broken pipe from ('127.0.0.1', 50978)
+[08/May/2026 15:47:30,633] - Broken pipe from ('127.0.0.1', 50979)
+[08/May/2026 15:47:50] "GET / HTTP/1.1" 200 11505
+[08/May/2026 15:47:51] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:47:51] "GET /static/db_browser/styles.css HTTP/1.1" 200 30060
+[08/May/2026 15:48:00] "GET /passages/1/read/ HTTP/1.1" 200 9649
+[08/May/2026 15:48:01] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:48:01] "GET /static/db_browser/styles.css HTTP/1.1" 200 30060
+[08/May/2026 15:48:10] "GET /passages/1/ HTTP/1.1" 200 188546
+[08/May/2026 15:48:11] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:48:11] "GET /static/db_browser/styles.css HTTP/1.1" 200 30060
+[08/May/2026 15:49:09] "GET / HTTP/1.1" 200 11505
+[08/May/2026 15:49:09] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:49:09] "GET /static/db_browser/styles.css HTTP/1.1" 200 30060
+[08/May/2026 15:49:22] "GET /passages/2/read/ HTTP/1.1" 200 9126
+[08/May/2026 15:49:22] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:49:30] "GET /passages/2/ HTTP/1.1" 200 130499
+[08/May/2026 15:51:23] "GET / HTTP/1.1" 200 12146
+[08/May/2026 15:51:23] "GET /passages/1/ HTTP/1.1" 200 189188
+[08/May/2026 15:51:23,153] - Broken pipe from ('127.0.0.1', 53749)
+[08/May/2026 15:51:23,311] - Broken pipe from ('127.0.0.1', 53750)
+[08/May/2026 15:51:40] "GET / HTTP/1.1" 200 12146
+[08/May/2026 15:51:41] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:51:41] "GET /static/db_browser/styles.css HTTP/1.1" 200 30279
+[08/May/2026 15:51:50] "GET /passages/1/ HTTP/1.1" 200 189188
+[08/May/2026 15:51:51] "GET /passages/2/ HTTP/1.1" 200 131141
+[08/May/2026 15:51:51] "GET /static/db_browser/transitions.js HTTP/1.1" 304 0
+[08/May/2026 15:51:51] "GET /static/db_browser/styles.css HTTP/1.1" 200 30279
+[08/May/2026 15:51:51] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:51:51] "GET /static/db_browser/styles.css HTTP/1.1" 200 30279
+[08/May/2026 15:52:00] "GET /passages/1/read/ HTTP/1.1" 200 9940
+[08/May/2026 15:52:01] "GET /static/db_browser/transitions.js HTTP/1.1" 200 958
+[08/May/2026 15:52:01] "GET /static/db_browser/styles.css HTTP/1.1" 200 30279
+[08/May/2026 15:52:03] "GET / HTTP/1.1" 200 12146
+[08/May/2026 15:52:03] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:52:18] "GET /passages/2/read/ HTTP/1.1" 200 9417
+[08/May/2026 15:52:18] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+[08/May/2026 15:52:42] "GET / HTTP/1.1" 200 12146
+[08/May/2026 15:52:42] "GET /static/db_browser/styles.css HTTP/1.1" 304 0
+C:\Users\naoki\english_reading_db\english_reading_browser\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\naoki\english_reading_db\english_reading_browser\settings.py changed, reloading.
+Watching for file changes with StatReloader

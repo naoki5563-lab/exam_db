@@ -1,0 +1,35 @@
+{% extends "db_browser/base.html" %}
+
+{% block title %}英文を読む - {{ passage.source_exam }}{% endblock %}
+{% block body_class %}reading-page{% endblock %}
+{% block layout_class %}reading-layout{% endblock %}
+
+{% block content %}
+  <section class="reader-shell" aria-labelledby="reader-title">
+    <header class="reader-head">
+      <div>
+        <a class="back-link" href="{{ back_url }}">← 英文を選び直す</a>
+        <p class="reader-kicker">First Reading</p>
+        <h1 id="reader-title">{{ passage.source_exam }}</h1>
+        <div class="badge-row reader-badges">
+          <span>{{ passage.year }}</span>
+          <span>{{ passage.word_count }}語</span>
+        </div>
+      </div>
+      <a class="open-link reader-action" href="{{ analysis_url }}">読み終えたので分析へ進む</a>
+    </header>
+
+    {% include "db_browser/partials/ad_slot.html" with placement="reader-top" title="上部広告枠" note="読解開始前に表示する広告枠です" %}
+
+    <article class="reader-paper">
+      <pre class="reader-text">{{ passage.passage_en }}</pre>
+    </article>
+
+    <footer class="reader-footer">
+      <a class="secondary-button" href="{{ back_url }}">英文を選び直す</a>
+      <a class="open-link" href="{{ analysis_url }}">分析へ進む</a>
+    </footer>
+
+    {% include "db_browser/partials/ad_slot.html" with placement="reader-middle" title="中央広告枠" note="英文読解を終えた後に表示する広告枠です" %}
+  </section>
+{% endblock %}

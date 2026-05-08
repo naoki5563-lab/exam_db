@@ -1,0 +1,77 @@
+{% extends "db_browser/base.html" %}
+
+{% block title %}{{ table_label }} #{{ pk }} - 大学受験 英文DB{% endblock %}
+
+{% block content %}
+  <div class="detail-head">
+    <div>
+      <a class="back-link" href="{{ back_url }}">← 英文の分析画面に戻る</a>
+      <h1>{{ table_label }} #{{ pk }}</h1>
+    </div>
+  </div>
+
+  <section class="detail-grid">
+    {% for field in fields %}
+      <article class="field-block">
+        <header>
+          <h2>{{ field.label }}</h2>
+          <span>{{ field.column.name }}</span>
+        </header>
+        {% if field.value.is_json or field.value.is_long %}
+          <pre>{{ field.value.text }}</pre>
+        {% else %}
+          <p class="{% if field.value.is_null %}null-cell{% endif %}">{{ field.value.text }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </section>
+
+  {% if related %}
+    <section class="related">
+      <h2>関連データ</h2>
+      {% for item in related %}
+        <section class="study-section">
+          <div class="section-header">
+            <h3>{{ item.label }}</h3>
+          </div>
+          <div class="table-wrap compact">
+            <table>
+              <colgroup>
+                <col class="action-col">
+                {% for column in item.columns %}
+                  <col style="width: {{ column.width }};">
+                {% endfor %}
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="row-action">詳細</th>
+                  {% for column in item.columns %}
+                    <th>{{ column.label }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in item.rows %}
+                  <tr>
+                    <td class="row-action">
+                      {% if row.detail_url %}
+                        <a href="{{ row.detail_url }}">開く</a>
+                      {% else %}
+                        <span>-</span>
+                      {% endif %}
+                    </td>
+                    {% for cell in row.cells %}
+                      <td class="{% if cell.value.is_null %}null-cell{% endif %}">
+                        <span title="{{ cell.value.text }}">{{ cell.value.preview|default:cell.value.text }}</span>
+                      </td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endblock %}

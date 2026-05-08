@@ -1,0 +1,70 @@
+{% extends "db_browser/base.html" %}
+
+{% block title %}全体検索 - 大学受験 英文DB{% endblock %}
+
+{% block content %}
+  <div class="toolbar">
+    <div>
+      <h1>全体検索</h1>
+      <p>{% if query %}「{{ query }}」の検索結果{% else %}検索語を入力してください{% endif %}</p>
+    </div>
+    <form class="search-form" action="{% url 'db_browser:global_search' %}" method="get">
+      <label>
+        <span>検索</span>
+        <input name="q" value="{{ query }}" placeholder="文法・語彙・テーマで検索">
+      </label>
+      <button type="submit">検索</button>
+    </form>
+  </div>
+
+  {% if query %}
+    {% for result in results %}
+      <section class="study-section">
+        <div class="section-header">
+          <div>
+            <h2>{{ result.label }}</h2>
+            <p>{{ result.total }}件中、先頭{{ result.rows|length }}件を表示</p>
+          </div>
+        </div>
+        <div class="table-wrap compact">
+          <table>
+            <colgroup>
+              <col class="action-col">
+              {% for column in result.columns %}
+                <col style="width: {{ column.width }};">
+              {% endfor %}
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="row-action">詳細</th>
+                {% for column in result.columns %}
+                  <th>{{ column.label }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in result.rows %}
+                <tr>
+                  <td class="row-action">
+                    {% if row.detail_url %}
+                      <a href="{{ row.detail_url }}">開く</a>
+                    {% else %}
+                      <span>-</span>
+                    {% endif %}
+                  </td>
+                  {% for cell in row.cells %}
+                    <td class="{% if cell.value.is_null %}null-cell{% endif %}">
+                      <span title="{{ cell.value.text }}">{{ cell.value.preview|default:cell.value.text }}</span>
+                    </td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {% empty %}
+      <section class="panel empty-state">該当するデータがありません。</section>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
